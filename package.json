@@ -6,20 +6,24 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --profile --colors --display-error-details --display-cached",
     "publish": "build --win -p always"
   },
   "author": "Alejandro Antolin",
   "license": "ISC",
   "devDependencies": {
     "electron": "^5.0.1",
+    "electron-builder": "^20.40.2",
     "electron-log": "^3.0.5",
     "electron-updater": "^4.0.6"
   },
   "build": {
-    "publish": [{
+    "publish": [
+      {
         "provider": "github",
         "owner": "alejandroantolin",
         "repo": "ECIPuzzle-Electron"
-    }],
-}
+      }
+    ]
+  }
 }
